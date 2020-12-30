@@ -1,0 +1,278 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Sandbox Environment · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./gitbook/style.css">
+        <link rel="stylesheet" href="./gitbook/gitbook-plugin-highlight/website.css">     
+        <link rel="stylesheet" href="./gitbook/gitbook-plugin-search/search.css">     
+        <link rel="stylesheet" href="./gitbook/gitbook-plugin-fontsettings/website.css"> 
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="./gitbook/images/favicon.ico" type="image/x-icon">
+        <link rel="prev" href="../" />
+        <style>
+            .button-wrapper{
+                float: left;
+            }
+            .button-wrapper button{
+                border-radius: 5px;
+                padding:0.9rem 2.2rem;
+                background-color: #409eff;
+                border-color: #409eff;
+            }
+            .form-control{
+                font-size:1.5rem;
+                height: 40px;
+            }
+            #sandbox-application .modal-body button{
+                padding:0.8rem 2rem;
+                font-size: 1.5rem;
+                width: 100%;
+            }
+            .error-message{
+                text-align: left;
+                width: 100%;
+                margin-top: .25rem;
+                font-size: 90%;
+                color: #dc3545;
+            }
+            .close{
+                font-size: 2rem;
+            }
+            #sandbox-application-form-container form >*{
+                border-radius: 5px;
+            }
+            .form-title h1::after{
+                content: "";
+                display: block; 
+                margin: 0 auto; 
+                width: 20%; 
+                padding-top: 20px; 
+                border-bottom: 5px solid  rgb(138, 159, 180);
+            }
+            .form-subtitle{
+                margin-bottom: 3rem;
+                color: gray;
+            }
+            .invalid-feedback{
+                text-align: left;
+                font-size: 85%;
+            }
+            .alert-fixed {
+                position:fixed; 
+                top: 10px; 
+                left: 50%; 
+                width: 10%;
+                z-index:9999; 
+                border-radius:0px;
+                padding:5px;
+            }
+            #sandbox-environment{
+                padding: 40px 0;
+            }
+            .sandbox-title-wrapper{
+                border-bottom: 2px solid #E6ECF1;
+                margin-bottom: 32px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="alert-primary alert-fixed" style="text-align: center; display: none;" role="alert">
+            <i class="fa fa-check-circle-o" aria-hidden="true" style="padding: 0 5px;"></i>Apply successfully!
+        </div>
+        <div class="alert-danger  alert-fixed" style="text-align: center; display: none;" role="alert">
+            <i class="fa fa-times" aria-hidden="true" style="padding: 0 5px;"></i>Apply failed!
+        </div>
+        <div class="book">
+            <div class="book-summary">      
+                <div id="book-search-input" role="search">
+                    <input type="text" placeholder="Type to search" />
+                </div> 
+                <nav role="navigation">
+                    <ul class="summary">
+                        <li class="chapter " data-level="1.1" data-path="../">
+                            <a href="../">  
+                                Home
+                            </a>
+                        </li>
+                        <li class="header">API REFERENCE V3</li>
+                        <li class="chapter active" data-level="2.1" data-path="sandbox-environment.html">
+                            <a href="sandbox-environment.html">
+                                Sandbox Environment
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                                Published with GitBook
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="book-body">
+                <div class="body-inner">       
+                    <div class="book-header" role="navigation">
+                        <!-- Title -->
+                        <h1 >
+                            <i class="fa fa-circle-o-notch fa-spin"></i>
+                            <a href=".." >Sandbox Environment</a>
+                        </h1>
+                    </div>
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            <div id="book-search-results">
+                                <div class="search-noresults">
+                                    <section class="normal markdown-section">
+                                        <div class="sandbox-title-wrapper">
+                                            <h1 id="sandbox-environment">Sandbox Environment</h1>
+                                        </div>
+                                        <h3 id="sandbox-account">Sandbox Account</h3>
+                                        <p>Yuansfer offers a sandbox environment to be used for testing the entire transaction flow and various cases before deploy your service 
+                                            into a live environment.</p>
+                                        <div class="alert alert-info hints-alert" style="background-color: #c7e3ff; border-color:#c7e3ff;vertical-align: bottom;" >
+                                            <div class="hints-icon" style="display: inline-block;">
+                                                <svg height="25" width="25">
+                                                    <path fill="#4fa6ff" d="M12.2 8.98c.06-.01.12-.03.18-.06.06-.02.12-.05.18-.09l.15-.12c.18-.19.29-.45.29-.71 0-.06-.01-.13-.02-.19a.603.603 0 0 0-.06-.19.757.757 0 0 0-.09-.18c-.03-.05-.08-.1-.12-.15-.28-.27-.72-.37-1.09-.21-.13.05-.23.12-.33.21-.04.05-.09.1-.12.15-.04.06-.07.12-.09.18-.03.06-.05.12-.06.19-.01.06-.02.13-.02.19 0 .26.11.52.29.71.1.09.2.16.33.21.12.05.25.08.38.08.06 0 .13-.01.2-.02M13 16v-4a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0M12 3c-4.962 0-9 4.038-9 9 0 4.963 4.038 9 9 9 4.963 0 9-4.037 9-9 0-4.962-4.037-9-9-9m0 20C5.935 23 1 18.065 1 12S5.935 1 12 1c6.066 0 11 4.935 11 11s-4.934 11-11 11"></path>
+                                                </svg> 
+                                            </div>
+                                            <div class="hints-container" style="display: inline-block;">
+                                                <div>The Sandbox environment API resource group is: https://mapi.yuansfer.yunkeguan.com</div>
+                                            </div>
+                                        </div>
+                                        <p>To make the API as usable as possible, accounts have test mode and live mode API keys. There is no separate url endpoint 
+                                            for live vs. test transactions. To move between modes, just use the appropriate API key to perform a live or test transaction. 
+                                            Requests made with test mode credentials never hit the banking networks and incur no cost.</p>
+                                        <div class="button-wrapper">
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sandbox-application">
+                                                Apply
+                                            </button>
+                                        </div>
+                                    </section>    
+                                </div>
+                                <div class="search-results">
+                                    <div class="has-results">
+                                        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+                                        <ul class="search-results-list"></ul>
+                                    </div>
+                                    <div class="no-results">
+                                        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div class="modal fade" id="sandbox-application" tabindex="-1"role="dialog">
+                <div class="modal-dialog modal-dialog-centered" style="min-width: 600px;">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class=" text-center form-title">
+                                <h1>Yuansfer Sandbox</h1>
+                            </div>
+                            <div class="text-center form-subtitle">
+                                <h4>Welcome! Fill out the below form to apply for sandbox account.</h4>
+                            </div>
+                            <div class="d-flex flex-column text-center" id="sandbox-application-form-container" style="width: 80%;margin: 0 auto;">
+                                <form id="sandbox-application-form" novalidate action="" method="">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="applicationMerchant" name="applyName" placeholder="Company" required/>
+                                        <div class="invalid-feedback">
+                                            Please enter merchant name.
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="applicationEmail" name="applyEmail" placeholder="name@example.com" required/>
+                                        <div class="invalid-feedback">
+                                            Please enter email.
+                                        </div>
+                                    </div>
+                                    <button type="submit" id="sandbox-application-button" class="btn btn-info btn-block btn-round">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-top-0" style="font-size: 1.2rem;margin: 0 auto;">
+                            <b>Having questions? Contact us at xxxxx@xxx.com or (999)999-9999.</b>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                var gitbook = gitbook || [];
+                gitbook.push(function() {
+                    gitbook.page.hasChanged({"page":{"title":"Sandbox Environment","level":"2.1","depth":1,"previous":{"title":"Home","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"api-reference-v3/sandbox-environment.md","mtime":"2020-12-29T20:41:41.645Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-29T20:41:48.391Z"},"basePath":"..","book":{"language":""}});
+                });
+                $(document).ready(function () {
+
+                    $("#sandbox-application-form").on("submit", function(e) {
+                        e.preventDefault();
+                        var form = $(this);
+                        if(form[0].checkValidity()==false){
+                            e.preventDefault();
+                            e.stopPropagation();
+                        }else{
+                            var postData = form.serializeArray();
+                            var mapped = postData.map(item => ({ [item.name]: item.value }) );
+                            var newObj = Object.assign({}, ...mapped );
+                            $.ajax({
+                                url: "https://portal.yuansfer.yunkeguan.com/api/storeTestaccount/add",
+                                type: "POST",
+                                headers: 'Content-Type: application/x-www-form-urlencoded',
+                                data: newObj,
+                                success: function(data, textStatus, jqXHR) {
+                                    console.log(data+":"+textStatus);
+                                    $("#sandbox-application").modal('hide');
+                                    $('.alert-primary').show(500);
+                                    setTimeout(function() { 
+                                        $('.alert-primary').hide(500);
+                                    }, 3000);
+                                },
+                                error: function(jqXHR, status, error) {
+                                    console.log(status + ": " + error);
+                                    $('.alert-danger').show(500);
+                                    setTimeout(function() { 
+                                        $('.alert-danger').hide(500);
+                                    }, 3000);
+                                }
+                            });
+                        }
+                        form.addClass('was-validated');
+                    });
+                    $('#sandbox-application').on('hidden.bs.modal', function () {
+                        $("#sandbox-application-form").trigger('reset');
+                        $("#sandbox-application-form").removeClass('was-validated');
+                    })
+                });
+            </script>
+        </div>
+        <script src="./gitbook/gitbook.js"></script>
+        <script src="./gitbook/theme.js"></script>
+        <script src="./gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="./gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="./gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="./gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="./gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="./gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
+
